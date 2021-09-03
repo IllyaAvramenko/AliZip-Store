@@ -1,0 +1,164 @@
+@import "fonts";
+@import "variables";
+@import "header";
+@import "contacts";
+@import "description";
+@import "production";
+@import "comboslots";
+@import "catalog";
+@import "fastorder";
+@import "video";
+@import "partners";
+@import "questions";
+@import "news";
+@import "questions-2";
+@import "location";
+@import "footer";
+@import "aside";
+@import "menu-mini";
+@import "popup-menu";
+@import "popup-message";
+@import "pullers";
+@import "posts";
+@import "zipper";
+@import "color-solution";
+@import "roll-zippers";
+@import "clothes-elements";
+@import "about";
+@import "certificate";
+@import "full-partners";
+@import "delivery";
+@import "answer";
+@import "prod";
+@import "creating";
+@import "pullers-logo";
+
+@import "button";
+
+
+body {
+   font-family: $pn-sbold;
+}
+
+*{
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: $link-color;
+   transition: ease-in all 0.1s;
+   &:hover {
+      color: darken($link-color, 30%);
+   }
+}
+
+.container {
+   width: 1440px;
+   margin: 0 auto;
+   color: #000;
+}
+
+html {
+   font-size: 10px;    
+}
+
+#wrapper {
+   display: flex;
+   justify-content: space-around;
+}
+
+main {
+   padding: 0rem 3rem 0rem 3rem;
+   width: 70%;
+}
+
+aside {
+   padding: 0rem 3rem 0rem 3rem;
+   margin: 7rem 0rem 4rem 0rem;
+   width: 25%;
+}
+
+.section-header {
+   margin: 0 auto;
+   padding: 1rem;
+   background: url(../img/brush-stroke.png) top center no-repeat;
+   h2 {
+      margin: 0;
+      @include adaptiv-font(36, 16);
+      text-align: center;
+   }
+   p {
+      margin: 0 auto;
+      margin-block-start: 0.5em;
+      @include adaptiv-font(17, 12);
+      text-align: center;
+      color: $grey;
+   }
+}
+
+.center {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.left {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+
+.animated {
+   animation-duration: 0.3s;
+}
+
+.status {
+   display: flex;
+   justify-content: center;
+}
+
+.margin-b {
+   margin-bottom: 5rem;
+}
+
+@media (max-width: 576px) {
+   .container {
+      max-width: 100%;
+      padding: 1rem;
+   }
+}
+ 
+@media (max-width: 768px) {
+   .container {
+     max-width: 95%;
+   }
+}
+ 
+@media (max-width: 1024px) {
+   .container {
+     max-width: 95%;
+   }
+}
+
+@media (max-width: 1280px) {
+   .container {
+      max-width: 1025px;
+   }
+
+   main {
+      padding: 0;
+      max-width: 1025px;
+      width: 100%;
+   }
+
+   aside {
+      display: none;
+   }
+}
+
+@media (max-width: 1440px) {
+   .container {
+     max-width: 1280px;
+   }
+}

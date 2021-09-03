@@ -1,0 +1,38 @@
+.certificate {
+   margin-bottom: 15rem;
+   &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+   }
+
+   &__item {
+      width: 30%;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .certificate {
+      margin-bottom: 5rem;
+   
+      &__item {
+         width: 50%;
+      }
+   }
+}
+
+@media (max-width: 576px) {
+   .certificate {
+      margin-bottom: 3rem;
+   
+      &__item {
+         width: 90%;
+      }
+   }
+}

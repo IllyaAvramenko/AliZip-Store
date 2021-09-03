@@ -1,0 +1,185 @@
+.questions {
+   background: url(../img/questions/questions-bg.png) top left no-repeat;
+   background-size: cover;
+
+   &__header {
+      @include adaptiv-font(32, 24);
+      color: $black;
+      span {
+         color: #00B300;
+      }
+   }
+
+   &__wrapper {
+      padding: 22rem 0rem 12rem 0rem;
+   }
+
+   &__accordion {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 0rem 0rem 5rem 0rem;
+   }
+
+   .accordion {
+      width: 100%;
+      margin: 0 auto;
+
+      &-collapse {
+         display: block;
+      }
+
+      &-header{
+         color: $black;
+         @include adaptiv-font(20, 12);
+         font-family: $pn-bold;
+         transition: all 1s;
+
+         &:hover {
+            .accordion-button {
+               &::before {
+                  background-color: darken(#FDCE8A, 10%);
+               }
+            }
+         }
+      }
+
+      &-button {
+         position: relative;
+         display: flex;
+         align-items: center;
+         text-align: left;
+         margin: 0 auto;
+         padding: 2.5rem 2.5rem 2.5rem 4rem;
+         width: 100%;
+         border: 0;
+         background-color: #fff;
+         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+         border-radius: 10px;
+         overflow: hidden;
+         cursor: pointer;
+         transition: all 1s ease-in-out;
+      }
+
+      &-body {
+         color: $grey;
+         @include adaptiv-font(17, 13);
+         font-family: $pn-reg;
+         margin-left: 1.5%;
+         display: none;
+      }
+
+      // Плевдоэлементы
+
+      .styles {
+         &::after {
+            flex-shrink: 0;
+            width: 5rem;
+            height: 5rem;
+            margin-left: auto;
+            content: "";
+            background-image: url(../img/questions/accordion-arrow.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: transform .2s ease-in-out;
+         }
+
+         &::before {
+            position: absolute;
+            width: 1.5%;
+            transform: translate(-4rem, 0px);
+            height: 100%;
+            content: "";
+            background-color: #FDCE8A;
+            transition: transform 0.2s ease-in-out;
+         }
+      }
+
+      .questions-accordion__active{
+         &::after {
+            flex-shrink: 0;
+            width: 5rem;
+            height: 5rem;
+            margin-left: auto;
+            content: "";
+            background-image: url(../img/questions/accordion-arrow.png);
+            transform: rotate(90deg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: transform .2s ease-in-out;
+         }
+
+         &::before {
+            position: absolute;
+            width: 1.5%;
+            transform: translate(-4rem, 0px);
+            height: 100%;
+            content: "";
+            background-color: darken(#FDCE8A, 15%);
+            transition: transform 0.2s ease-in-out;
+         }
+      }
+
+      // Active Selectors
+
+      .active-head {
+         display: flex;
+      }
+
+      .active-body {
+         display: block;
+      }
+   }
+}
+
+
+
+@media (max-width: 1440px) {
+   .questions {
+      background: url(../img/questions/questions-bg.png) center center no-repeat;
+      background-size: cover;
+   }
+}
+
+@media (max-width: 1280px) {
+   .questions {
+      background: url(../img/questions/vawe.png) center center no-repeat;
+      background-size: cover;
+
+      &__wrapper {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &__accordion {
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .questions {
+      &__wrapper {
+         padding: 7rem 0rem 5rem 0rem;
+      }
+
+      &__accordion {
+         width: 90%;
+      }
+
+      .left {
+         width: 90%;
+      }
+   }
+}
+
+@media (max-width: 578px) {
+   .questions {
+      .accordion {
+         &-button {
+            padding: 0.5rem 0.5rem 0.5rem 2rem;
+         }
+      }
+   }
+}

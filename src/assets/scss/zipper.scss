@@ -1,0 +1,160 @@
+.zipper {
+   margin: 6rem 0rem;
+   color: #000;
+
+   h2 {
+      @include adaptiv-font(36, 22);
+      margin-block-end: 0.3em;
+   }
+
+   strong {
+      font-family: $pn-bold;
+      color: $text-grey;
+      @include adaptiv-font(17, 14);
+   }
+
+   p {
+      font-family: $pn-reg;
+      color: $text-grey;
+      @include adaptiv-font(16, 14);
+   }
+
+   ul {
+      margin: 1rem 0rem 4rem;
+      li {
+         font-family: $pn-reg;
+         color: $text-grey;
+         @include adaptiv-font(16, 14);
+      }
+   }
+
+   table {
+      width: 100%;
+      td, th {
+         padding: 3rem 6rem;
+         text-align: center;
+      }
+
+      th {
+         background-color: #ECECEC;
+         @include adaptiv-font(16, 12);
+         font-family: $pn-bold;
+      }
+
+      td {
+         background-color: #F4f4F4;
+         @include adaptiv-font(16, 12);
+         font-family: $pn-reg;
+      }
+
+      span {
+         @include adaptiv-font(16, 12);
+         font-family: $pn-bold;
+      }
+   }
+
+   button {
+      margin-top: 4rem;
+   }
+
+   &-img {
+      margin: 6rem 0rem;
+      text-align: center;
+
+      img {
+         width: 80%;
+      }
+   }
+
+   &__wrapper {
+      width: 100%;
+      display: flex;
+   }
+
+   &__col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 50%;
+      margin: 0.75rem;
+      padding: 1rem;
+
+      border: 1px solid #E6E6E6;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.02);
+      border-radius: 20px;
+
+
+      p {
+         @include adaptiv-font(18, 14);
+         color: #000;
+         font-family: $pn-bold;
+      }
+
+      &-content {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      &-item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+
+         img {
+            width: 90%;
+         }
+      }
+
+      &-title {
+         text-align: center;
+      }
+   }
+
+   &-margin {
+      margin: 3rem 0rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .zipper {
+      &__wrapper {
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &__col {
+         width: 90%;
+      }
+
+      table {
+         td, th {
+            padding: 1rem 2rem;
+            text-align: center;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .zipper {
+      &__wrapper {
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &__col {
+         width: 90%;
+      }
+
+      table {
+         td, th {
+            padding: 0.5rem;
+            text-align: center;
+         }
+      }
+   }
+}

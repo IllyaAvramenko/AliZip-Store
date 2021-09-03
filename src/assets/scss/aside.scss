@@ -1,0 +1,136 @@
+.aside{
+   &-menu {
+      &__accordion {
+         margin-bottom: 4rem;
+      }
+      
+      h4 {
+         font-family: $pn-bold;
+         font-size: 1.6rem;
+         color: $black;
+      }
+      .accordion {
+         h5 {
+            margin: 0;
+         }
+
+
+         &-button {
+            position: relative;
+            padding-left: 2rem;
+            color: #9B51E0;
+            font-size: 1.6rem;
+            font-family: $pn-bold;
+            width: 100%;
+            background: #fff;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            transition: ease-in all 0.1s;
+            
+            &:hover {
+               color: darken($link-color, 30%);
+            }
+   
+            &::before {
+               position: absolute;
+               margin: 0rem 0rem 0rem -2rem;
+               width: 1.3rem;
+               height: 1.3rem;
+               content: "";
+               background-image: url(../img/aside/aside-arrow.svg);
+               background-repeat: no-repeat;
+               background-size: contain;
+               transition: transform 0.2s ease-in-out;
+            }
+         }
+
+         ul {
+            padding: 0rem 0rem 0rem 2rem;
+            li {
+               display: flex;
+               align-items: center;
+               font-family: $pn-reg;
+               @include adaptiv-font(16, 12);
+               color: #9B51E0;
+               padding: 0.1rem 0rem 0.1rem 0rem;
+               list-style-type: none;
+
+               a {
+                  &:hover {
+                     color: #00B300;
+                  }
+               }
+
+               &::before {
+                  content: url(../img/aside/Ellipse.svg);
+                  margin-right: 1.6rem;
+                  color:#f16092;
+               }
+            }
+         }
+
+         &-collapse {
+            &::after {
+               content: '';
+               text-align: center;
+               margin: 1rem auto;
+               height: 1px;
+               width: 100%;
+               display: block;
+               background-color: #F0E5E5;
+               transition: all 0.2s;
+            }
+         }
+
+         &-body {
+            display: none;
+         }
+
+         // Active Selectors
+
+         .active-head {
+            display: flex;
+         }
+
+         .active-body {
+            display: block;
+         }
+
+         .aside-menu__active {
+            &::before {
+               position: absolute;
+               margin: 0.5rem 0rem 0rem -2rem;
+               width: 1.3rem;
+               height: 1.3rem;
+               content: "";
+               background-image: url(../img/aside/aside-arrow.svg);
+               background-repeat: no-repeat;
+               background-size: contain;
+               transform: rotate(90deg);
+               transition: transform 0.2s ease-in-out;
+            }
+         }
+      }
+   }
+
+   &__banners {
+      &-top {
+         width: 100%;
+         height: 65rem;
+         background: url(../img/aside/banner-top.png) top left no-repeat;
+         background-size: contain;
+         border-radius: 1rem;
+         margin-top: 8rem;
+         margin-bottom: 2rem;
+      }
+
+      &-bottom {
+         width: 100%;
+         height: 40rem;
+         background: url(../img/aside/banner-bottom.png) top left no-repeat;
+         background-size: contain;
+         border-radius: 1rem;
+      }
+   }
+}

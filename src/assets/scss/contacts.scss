@@ -1,0 +1,160 @@
+.contacts {
+   padding: 0.5rem;
+   background-color: #27283D;
+
+   p {
+      color: $white;
+      font-family: $pn-reg;
+      font-size: 1.6rem;
+      margin-left: 0.5rem;
+   }
+
+   a {
+      text-decoration: none;
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__call {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      img {
+         margin-left: 2rem;
+         transition: all 0.2s ease-in;
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+
+      &-messengers {
+         display: flex;
+         align-items: center;
+         img {
+            margin: 0rem 0.5rem 0rem 0.5rem;
+         }
+      }
+
+      &-numbers {
+         display: flex;
+         align-items: center;
+
+         span {
+            color: $grey;
+         }
+      }
+
+      &-review {
+         transition: all 0.2s ease-in;
+         &:hover {
+            p {
+               color: $main-yellow;
+            }
+         }
+
+         a {
+            display: flex;
+            align-items: center;
+         }
+      }
+
+      &-application {
+         transition: all 0.2s ease-in;
+         &:hover {
+            p {
+               color: $main-yellow;
+            }
+         }
+
+         a {
+            display: flex;
+            align-items: center;
+         }
+      }
+   }
+
+   &__friends {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+         margin: 0rem 0.3rem 0rem 0.3rem;
+      }
+
+      p {
+         margin: 1rem;
+      }
+   }
+
+   &__soc {
+      a {
+         display: inline-block;
+         width: 2rem;
+         height: 2rem;
+
+         &:nth-child(1) {
+            background-color: #fff;
+            mask-image: url(../img/header/vkontakte.svg);
+            &:hover {
+               background-color: #5B7EA2;
+            }
+         }
+         &:nth-child(2) {
+            background: #fff;
+            mask-image: url(../img/header/instagram.svg);
+            &:hover {
+               background: linear-gradient(-45deg, #E1306C, #FD1D1D);
+            }
+         }
+         &:nth-child(3) {
+            background-color: #fff;
+            mask-image: url(../img/header/facebook.svg);
+            &:hover {
+               background-color: #3B5C97;
+            }
+         }
+         &:nth-child(4) {
+            background-color: #fff;
+            mask-image: url(../img/header/youtube.svg);
+            &:hover {
+               background-color: #FA141B;
+            }
+         }
+      }
+   }
+
+   &__text {
+      transition: all 0.2s ease-in;
+      &:hover {
+         p {
+            color: $main-yellow;
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .contacts {
+      &__content {
+         display: block;
+      }
+
+      &__friends {
+         display: none;
+      }
+      p {
+         font-size: 1.4rem;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .contacts {
+      display: none;
+   }
+}

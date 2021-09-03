@@ -1,0 +1,164 @@
+.fastorder {
+   background: url(../img/fastorder/fastorder-bg.png) center center no-repeat;
+   background-size: cover;
+   margin-top: 4rem;
+   
+   form {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      input {
+         border: 1px solid #F2F2F2;
+         border-radius: 5px;
+         padding: 1.2rem 10rem 1.2rem 0rem;
+         @include adaptiv-font(14, 13);
+         font-family: $pn-reg;
+         color: $inputs-text;
+         margin-right: 1.5rem;
+      }
+
+      .users {
+         background: url(../img/fastorder/Users.svg) no-repeat center left 1rem;
+         background-color: #fff;
+         padding-left: 4rem;
+      }
+      .phone {
+         background: url(../img/fastorder/phone.svg) no-repeat center left 1rem;
+         background-color: #fff;
+         padding-left: 4rem;
+      }
+   }
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 4rem;
+   }
+
+   &__input {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+         @include adaptiv-font(12, 10);
+         font-family: $pn-reg;
+         color: #fff;
+         margin-block-end: 0.5em;;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   &__header {
+      margin: 3rem auto 3rem auto;
+      h2 {
+         @include adaptiv-font(32, 16);
+         margin: 0;
+         color: #fff;
+      }
+      p {
+         font-family: $pn-reg;
+         @include adaptiv-font(17, 12);
+         margin: 0;
+         color: rgba(255, 255, 255, 0.7);
+      }
+   }
+   &__warning {
+      margin: 3rem 0rem 3rem 0rem;
+      p {
+         margin: 0 auto;
+         text-align: center;
+         width: 66%;
+         font-family: $pn-reg;
+         @include adaptiv-font(14, 12);
+         color: rgba(255, 255, 255, 0.8)
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .fastorder {
+      &__wrapper {
+         margin-right: 0;
+      }
+
+      form {
+         input {
+            padding: 1.2rem 4rem 1.2rem 0rem;
+         }
+      }
+
+      &__warning {
+         p {
+            width: 75%;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .fastorder {
+      background-size: cover;
+
+      &__wrapper {
+         margin-right: 0;
+      }
+
+      &__wrapper {
+         width: 100%;
+         flex-direction: column;
+         margin-bottom: 2rem;
+         align-items: center;
+         justify-content: center;
+      }
+
+      &__input {
+         width: 50%;
+      }
+
+      form {
+         width: 100%;
+         flex-direction: column;
+         align-items: center;
+         input {
+            width: 100%;
+            padding: 1.2rem 4rem 1.2rem 0rem;
+            margin: 0 auto;
+         }
+      }
+
+      .type-1 {
+         width: 100%;
+         button {
+            width: 45%;
+         }
+      }
+
+      &__warning {
+         p {
+            width: 75%;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .fastorder {
+      &__input {
+         width: 90%;
+      }
+
+      .type-1 {
+         button {
+            width: 80%;
+         }
+      }
+   }
+}

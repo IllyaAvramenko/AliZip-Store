@@ -1,0 +1,54 @@
+.description {
+   margin: 9rem 0rem 4rem 0rem;
+
+   &-mini {
+      margin: 7rem 0rem 4rem 0rem;
+   }
+
+   h2 {
+      @include adaptiv-font(36, 22);
+      margin-block-end: 0.3em;
+   }
+   strong {
+      font-family: $pn-bold;
+      @include adaptiv-font(17, 14);
+   }
+
+   span {
+      font-family: $pn-bold;
+      color: $text-grey;
+      @include adaptiv-font(17, 14);
+   }
+   p {
+      font-family: $pn-reg;
+      color: $text-grey;
+      @include adaptiv-font(16, 14);
+   }
+   a {
+      font-family: $pn-reg;
+      @include adaptiv-font(16, 14);
+   }
+
+   &-img {
+      width: 100%;
+      margin: 1rem;
+      
+      img {
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .description {
+      margin: 3rem 0rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .description {
+      h2 {
+         margin: 0rem 0rem 1.5rem 0rem;
+      }
+   }
+}

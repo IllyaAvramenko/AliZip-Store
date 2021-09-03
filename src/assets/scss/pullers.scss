@@ -1,0 +1,140 @@
+.pullers {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 8rem;
+
+   &__nav {
+      display: flex;
+      align-items: start;
+      width: 100%;
+
+      ul {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         list-style: none;
+         padding: 0;
+         margin: 2rem 0rem 1.5rem;
+         width: 100%;
+         
+         li {
+            border: 1px solid #C4C4C4;
+            border-radius: 5px;
+            font-family: $pn-reg;
+            font-size: 1.6rem;
+            color: #9B51E0;
+            padding: 0.5rem 0.75rem;
+            margin: 0.5rem;
+            cursor: pointer;
+         }
+      }
+   }
+
+   &__products {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 4rem;
+
+      &-item {
+         width: 30.33%;
+         height: 40rem;
+         padding: 2.5rem 3rem;
+         margin: 1em 1em;
+
+         border: 1px solid #F0E5E5;
+         border-radius: 20px;
+      }
+
+      &-top {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+         border-radius: 20px;
+         height: 77%;
+         width: 100%;
+
+         img {
+            width: 100%;
+         }
+
+         &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #F0E5E5;
+         }
+      }
+
+      &-bottom {
+
+         p {
+            font-size: 1.4rem;
+            color: #000;
+            margin: 1em 0em 0.5em 0em;
+         }
+
+         h5 {
+            cursor: pointer;
+            font-size: 1.7rem;
+            color: #9B51E0;
+            margin: 0;
+         }
+      }
+   }
+}
+
+.filter__active {
+   color: #fff !important;
+   background-color: #00B300;
+   border: 1px solid #00B300;
+}
+
+@media (max-width: 1440px) {
+   .pullers {
+      &__nav {
+         ul {
+            li {
+               font-size: 1.4rem;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .pullers {
+
+      &__products {
+         &-item {
+            width: 44%;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .pullers {
+      &__products {
+         &-item {
+            width: 44%;
+         }
+      }
+   }
+}
+
+@media (max-width: 576px) {
+   .pullers {
+      &__products {
+         &-item {
+            width: 100%;
+         }
+      }
+   }
+}

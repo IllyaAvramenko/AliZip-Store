@@ -1,0 +1,125 @@
+.production {
+   margin-bottom: 10rem;
+   &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   &__item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      h5 {
+         margin: 0;
+         font-family: $pn-bold;
+         @include adaptiv-font(22, 14);
+      }
+      p {
+         margin-left: 0.3rem;
+         margin-right: 1rem;
+         margin-block-start: 0.3em;
+         @include adaptiv-font(17, 12);
+         color: $grey;
+         font-family: $pn-reg;
+      }
+      &-wrap {
+         display: flex;
+         align-items: center;
+         margin: 1rem;
+         padding: 2rem;
+         width: 47%;
+         box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+         border-radius: 10px;
+         transition: all 0.3s;
+         &:last-child {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+         }
+         &:hover {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+         }
+      }
+      &-text {
+         margin-right: 2rem;
+      }
+
+      img {
+         overflow: hidden;
+         border-radius: 5px;
+      }
+   }
+
+   &__order {
+      width: 100%;
+      h5 {
+         text-decoration: none;
+         margin: 0;
+         font-family: $pn-bold;
+         color: $black;
+         @include adaptiv-font(22, 14);
+      }
+      p {
+         margin-left: 0.3rem;
+         margin-right: 1rem;
+         margin-block-start: 0.3em;
+         @include adaptiv-font(17, 12);
+         color: $grey;
+      }
+      
+   a {
+      font-family: $pn-reg;
+      @include adaptiv-font(16, 14);
+   }
+   }
+}
+
+@media (max-width: 1280px) {
+   .production {
+      &__item {
+         &-wrap {
+            width: 48%;
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .production {
+      margin-bottom: 3rem;
+      &__item {
+         &-wrap {
+            width: 47%;
+            margin: 1rem;
+            padding: 1rem;
+         }
+
+         &-picture {
+            width: 95%;
+         }
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+@media (max-width: 578px) {
+   .production {
+      &__item {
+         &-wrap {
+            width: 80%;
+         }
+      }
+   }
+}
+
+@media (max-width: 320px) {
+   .production {
+      &__item {
+         &-wrap {
+            width: 100%;
+         }
+      }
+   }
+}

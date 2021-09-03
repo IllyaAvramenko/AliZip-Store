@@ -1,0 +1,53 @@
+.partners {
+   margin-bottom: 14rem;
+   &__header {
+      p {
+         width: 53%; 
+      }
+   }
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 4.5rem 0rem 5rem 0rem;
+   }
+
+   &__item {
+      padding: 1rem;
+      img {
+         width: 100%;
+         transition: all 1s;
+
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .partners {
+      margin-bottom: 0;
+      &__header {
+         p {
+            width: 85%;
+         }
+      }
+
+      &__wrapper {
+         margin: 2.5rem 0rem 2rem 0rem;
+      }
+   }
+}
+
+@media (max-width: 578px) {
+   .partners {
+      &__wrapper {
+         flex-wrap: wrap;
+      }
+
+      &__item {
+         width: 33.33%;
+      }
+   }
+}

@@ -1,0 +1,107 @@
+.comboslots {
+   margin-bottom: 13rem;
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__item {
+      margin: 1rem;
+      font-family: $pn-bold;
+      @include adaptiv-font(18, 12);
+
+      &-content {
+         padding: 1rem;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         img {
+            transition: ease-in all 0.2s;
+            width: 100%;
+            &:hover {
+               transform: scale(1.05);
+            }
+         }
+      }
+      
+      &-img {
+         margin: 0 auto;
+         width: 20rem;
+         height: 20rem;
+      }
+
+      p {
+         width: 80%;
+         margin: 0 auto;
+         text-align: center;
+         color: $black;
+         transition: ease-in all 0.2s;
+         &:hover {
+            color: lighten($black, 30%);
+         }
+      }
+   }
+}
+
+@media (max-width: 1440px) {
+   .comboslots {
+      &__item {
+         &-img {
+            width: 17rem;
+            height: 17rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .comboslots {
+      margin-bottom: 3rem;
+      &__item {
+         &-img {
+            width: 14rem;
+            height: 14rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .comboslots {
+      margin-bottom: 3rem;
+      &__item {
+         width: 20%;
+         &-img {
+            width: 8rem;
+            height: 8rem;
+         }
+
+         p {
+            width: 100%;
+         }
+      }
+   }
+}
+
+@media (max-width: 578px) {
+   .comboslots {
+      &__wrapper {
+         flex-direction: column;
+      }
+
+      margin-bottom: 3rem;
+      &__item {
+         height: 15rem;
+         width: 100%;
+         &-img {
+            width: 10rem;
+            height: 10rem;
+         }
+
+         p {
+            width: 100%;
+         }
+      }
+   }
+}

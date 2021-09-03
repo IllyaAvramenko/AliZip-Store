@@ -1,0 +1,42 @@
+.message-modal {
+   &__content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+
+      width: 60%;
+      height: 60%;
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+      border-radius: 20px;
+      background: #FFFFFF;
+   }
+
+   &__text {
+      font-family: $mp-reg;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+
+      h3 {
+         @include adaptiv-font(36, 18);
+         margin: 0.5rem;
+      }
+
+      p {
+         @include adaptiv-font(18, 12);
+      }
+   }
+
+   &__close {
+      display: flex;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+   }
+}

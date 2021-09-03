@@ -1,0 +1,281 @@
+.creating {
+   margin-bottom: 12rem;
+
+   h2 {
+      @include adaptiv-font(36, 22);
+      margin-block-end: 0.3em;
+   }
+
+   strong {
+      font-family: $pn-bold;
+      color: $text-grey;
+      @include adaptiv-font(17, 14);
+   }
+
+   p {
+      font-family: $pn-reg;
+      color: $text-grey;
+      @include adaptiv-font(16, 14);
+   }
+
+   h5 {
+      margin: 0;
+      font-family: $pn-bold;
+      @include adaptiv-font(22, 14);
+      color: #fff;
+      transition: all 1s;
+
+      &:hover {
+         color: #000;
+      }
+   }
+
+   &-mini {
+      margin-bottom: 4rem;
+   }
+
+   &__top {
+      position: relative;
+      display: flex;
+      background: url(../img/creating/01.png) center no-repeat;
+      background-size: 115%;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+
+      transition: all 1s;
+      &:hover {
+         background-size: 130%;
+      }
+
+      span {
+         position: absolute;
+         right: 50%;
+         transform: translate(50%, 0%);
+         width: 10%;
+         height: 100%;
+         background-color: #fff;
+      }
+
+      &-wrap {
+         padding: 1.5rem 2rem 1.5rem 2rem;
+         width: 100%;
+         height: 20rem;
+      }
+   }
+
+   &__bottom {
+      margin-bottom: 5rem;
+   }
+
+   &__brending {
+      position: relative;
+      width: 50%;
+      padding: 2rem 4rem 2rem 2rem;
+      background-color: #EEEEEE;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      &-wrap {
+         display: flex;
+      }
+      &-elem {
+         display: flex;
+         align-items: center;
+         transform: scale(1.3);
+      }
+
+      h5 {
+         margin-block-start: 0.5em;
+         margin-block-end: 0.5em;
+         @include adaptiv-font(24, 14);
+         color: $black;
+      }
+      .color {
+         color: #A8BF31;
+         font-family: $pn-sbold;
+         @include adaptiv-font(17, 12);
+      }
+      p {
+         font-family: $pn-reg;
+         @include adaptiv-font(17, 12);
+         color: $grey;
+      }
+   }
+
+   &__pullers {
+      display: flex;
+      &-wrapper {
+         display: flex;
+         flex-direction: column;
+         width: 50%;
+      }
+
+      h5 {
+         margin: 0;
+         font-family: $pn-bold;
+         @include adaptiv-font(22, 14);
+         color: #fff;
+         transition: all 1s;
+
+         &:hover {
+            color: #000;
+         }
+      }
+
+      &-wrap {
+         display: flex;
+         margin: 0.75rem 0.75rem 0.75rem 0rem;
+         height: 50%;
+      }
+
+      &-big {
+         padding: 1.5rem 2rem 1.5rem 2rem;
+         margin:  0.75rem 0rem 0.75rem 0.75rem;
+         width: 50%;
+         height: 44rem;
+         background: url(../img/creating/05.png) left -1rem top -2rem no-repeat;
+         background-size: 110%;
+         border-radius: 1rem;
+
+         transition: all 1s;
+         &:hover {
+            background-size: 125%;
+         }
+      }
+
+      &-middle {
+         padding: 1.5rem 2rem 1.5rem 2rem;
+         width: 100%;
+         height: 100%;
+         background: url(../img/creating/04.png) center center no-repeat;
+         background-size: 105%;
+         border-radius: 1rem;
+         transition: all 1s;
+
+         &:hover {
+            background-size: 120%;
+         }
+      }
+
+      &-small {
+         padding: 1.5rem 2rem 1.5rem 2rem;
+         width: 50%;
+         border-radius: 1rem;
+         &:first-child {
+            margin-right: 0.75rem;
+            background: url(../img/creating/02.png) center center no-repeat;
+            background-size: 105%;
+            transition: all 1s;
+
+            &:hover {
+               background-size: 120%;
+            }
+         }
+         &:last-child {
+            margin-left: 0.75rem;
+            background: url(../img/creating/03.png) center center no-repeat;
+            background-size: 105%;
+            transition: all 1s;
+
+            &:hover {
+               background-size: 120%;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .creating {
+      margin-bottom: 5rem;
+      &__top {
+         background: url(../img/creating/01.png) right -13rem top  no-repeat;
+      }
+
+      &__brending {
+         width: 100%;
+         &-elem {
+            display: none;
+         }
+      }
+
+      &__bottom {
+         margin-bottom: 2rem;
+      }
+
+      &__pullers {
+         &-big {
+            height: 33rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .creating {
+      margin-bottom: 5rem;
+      &__top {
+         background: url(../img/creating/01.png) right -13rem top  no-repeat;
+      }
+
+      &__bottom {
+         margin-bottom: 2rem;
+      }
+
+      &__pullers {
+         flex-direction: column;
+
+         &-wrapper {
+            width: 100%;
+         }
+
+         &-wrap {
+            display: flex;
+            margin: 0.75rem 0rem 0.75rem 0rem;
+            height: 50%;
+         }
+
+         &-big {
+            width: 100%;
+            height: 33rem;
+            margin: 1.5rem 0rem;
+            background: url(../img/creating/05.png) center center no-repeat;
+            background-size: cover;
+         }
+
+         &-middle{
+            width: 100%;
+            height: 20rem;
+         }
+
+         &-small {
+            padding: 1.5rem 2rem 1.5rem 2rem;
+            width: 50%;
+            height: 20rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 578px) {
+   .creating {
+      &__wrapper {
+         margin-top: 2rem;
+      }
+
+      &__pullers {
+
+         &-big {
+            height: 25rem;
+         }
+
+         &-middle{
+            height: 15rem;
+         }
+
+         &-small {
+            height: 15rem;
+         }
+      }
+   }
+}
